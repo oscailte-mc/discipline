@@ -1,5 +1,5 @@
 # Discipline Specification Proposal
-> Once an initial specification is finalised, and implementation has begin, the specification will be versioned, and this file will be renamed to spec-version.md
+> Once an initial specification is finalised, and implementation has begun, the specification will be versioned, and this file will be renamed to spec-version.md
 
 As discussions occur about a particular section of this specification, they should be linked to herein, so that further feedback can be solicited. 
 
@@ -17,11 +17,11 @@ The plugin is to be called discipline[^1], and will be centered around general m
 
 - **Punishments**
 
-This is the bread-and-butter core of this plugin, it aims to be a more or less replacement for equivalent plugins in the space, both those which are proprietary and open source. Punishments should be transparent and auditable to the fullest extent possible, and individual actions will be ble to be rolled back, should the need arise.
+This is the bread-and-butter core of this plugin, it aims to be a more or less replacement for equivalent plugins in the space, both those which are proprietary and open source. Punishments should be transparent and auditable to the fullest extent possible, and individual actions will be able to be rolled back, should the need arise.
 
 - **Moderation Management** 
 
-Through the extension of the discipline web interface, the plugin aims to provide as a knowledgebase on your players, and allow for the easy tracking of appeals, complaints and reports as well as the concatenation of multiple sources of information, including PLAN, various anti-cheats with the ability to export such information for viewing on dashboard applications such as Grafana.
+Through the extension of the discipline web interface, the plugin aims to provide a knowledgebase on your players and allow for the easy tracking of appeals, complaints, and reports as well as the concatenation of multiple sources of information, including PLAN, various anti-cheats with the ability to export such information for viewing on dashboard applications such as Grafana.
 
 - **Concerns of Overreach / 'Bloat'**
 
@@ -45,19 +45,19 @@ Support for these will be based on demand.
 ## 4. Planned Features
 - Command-focused
 
-Minecraft 'Graphical User Interfaces' are gimmicky, clunky and slow to use, it is best if such a featureset is not included in the core plugin, but if a third party wishes to create a GUI on top of the project's API they will be supported, and we would be happy to promote such a project.
+Minecraft 'Graphical User Interfaces' are gimmicky, clunky, and slow to use, it is best if such a feature set is not included in the core plugin, but if a third party wishes to create a GUI on top of the project's API they will be supported, and we would be happy to promote such a project.
 
-- Easy to switch to.
+- Easy to switch to
 
-We want the onboarding process for new server owners, and those with existing punishment setups to be as simple as possible through detailed documentation, and support from the community on discord and via the discussion board on GitHub. We will also be providing the ability to import punishments from community used existing projects, such as LiteBans and LibertyBans, as well as those which were inflicted using the first-party implementation of punishments. 
+We want the onboarding process for new server owners, and those with existing punishment setups to be as simple as possible through detailed documentation, and support from the community on discord and via the discussion board on GitHub. We will also be providing the ability to import punishments from community-used existing projects, such as LiteBans and LibertyBans, as well as those which were inflicted using the first-party implementation of punishments. 
 
-- Support for punising offline players
+- Support for punishing offline players
 
-There's nothing more frustrating than not being able to inflict your wrath on a player which has just logged off, or not being able to deal with appeals and complaints while said player is offline, as such all of this will be doable offline.
+There's nothing more frustrating than not being able to inflict your wrath on a player who has just logged off, or not being able to deal with appeals and complaints while the player is offline, as such all of this will be possible with the player offline.
 
 - Fully localizable 
 
-Every string sent in-game will be modifable in such a way that makes it easy to translate, potentially through the use of online utilities such as crowdin to source contributions.
+Every string sent in-game will be modifiable in such a way that makes it easy to translate, potentially through the use of online utilities such as Crowdin to source contributions.
 
 - Highly Customizable 
 
@@ -65,19 +65,19 @@ Based on Configurate, several configuration formats will be available, primarily
 
 - Notifications for on-duty staff
 
-Staff members (identified by role, context or permission) will be notified if users sharing an IP address join, and if another username tries to join from the same IP as a punished player in order to detect punishment evasion early. It should be possible to outright prevent it by default. 
+Staff members (identified by role, context, or permission) will be notified if users sharing an IP address join, and if another username tries to join from the same IP as a punished player in order to detect punishment evasion early. It should be possible to outright prevent it by default. 
 
 - Support for Egress
 
-Nothing is more fun than looking at pretty graphs, and for that we're going to try to create hooks for the likes of Grafana, so you can have all the pretty graphs you could ever want.
+Nothing is more fun than looking at pretty graphs, and for that, we're going to try to create hooks for the likes of Grafana, so you can have all the pretty graphs you could ever want.
 
 - SQL and NoSQL support
 
-We will provide support for several types of database, SQLLite will be used by default however it is HIGHLY recommended that a proper database server is utilised such as Postgres, or MariaDB. Support for MongoDB is being considered as well. 
+We will provide support for several types of databases, SQLLite will be used by default however it is HIGHLY recommended that a proper database server is utilised such as Postgres, or MariaDB. Support for MongoDB is being considered as well. 
 
 - Rollbacks
 
-In the event of questionable action by a particular member of staff, comprimised accounts, etc it will be possible to rollback the actions of a particular member of staff over a time period, as well as the revokation of related tokens, for use in the web-panel.
+In the event of questionable action by a particular member of staff, compromised accounts, etc it will be possible to roll back the actions of a particular member of staff over a time period, as well as the revocation of related tokens, for use in the web-panel.
 
 - Customizable disconnect messages
 
@@ -118,7 +118,7 @@ Commands will be implemented using cloud and will make use of command-flags, and
 
 #### Lookup / History commands
 
-> Due to the ergonomics of minecraft commands, it would be best if this experience was limited in such a way that it endorses the use of the web panel
+> Due to the ergonomics of Minecraft commands, it would be best if this experience was limited in such a way that it endorses the use of the web panel
 
 | command      | usage                                      | description                                                    |
 | ------------ | ------------------------------------------ | -------------------------------------------------------------- |
@@ -132,13 +132,13 @@ Commands will be implemented using cloud and will make use of command-flags, and
 
 ## 6. Stack / Architecture
 
-This list only serves as a rough guide to show the layout and architecute of the project.
+This list only serves as a rough guide to show the layout and architecture of the project.
 
 -   Java 11, so as to support reasonably old versions, from 1.8 onwards. 
 -   Gradle: Kotlin DSL
 -   JUnit 5
--   Adventure, as a wrapper for minecraft-native components.
--   Cloud for command dispatching, auto-competition and flag-parsing
+-   Adventure, as a wrapper for Minecraft-native components.
+-   Cloud for command dispatching, auto-competition, and flag-parsing
 -   Configurate for configuration handling
 -   Ebean as a Java ORM
 
@@ -159,10 +159,10 @@ A string formatted as a piece of time for example “1M2w4d16h10m30s”
 | s       | second  |
 * Enforced order of above symbols. 
 
-There is currently a work-in-progress [PR](https://github.com/Incendo/cloud/pull/330) which adds this functionality to cloud, however this has not been merged to date. 
+There is currently a work-in-progress [PR](https://github.com/Incendo/cloud/pull/330) which adds this functionality to cloud, however, this has not been merged to date. 
 
 #### Flags
-If an ip or uuid is not specified then it is assumed the target is a username.
+If an IP or UUID is not specified then it is assumed the target is a username.
 
 | flag | example                                     | purpose                                     |
 | ---- | ------------------------------------------- | ------------------------------------------- |
@@ -175,12 +175,12 @@ If an ip or uuid is not specified then it is assumed the target is a username.
 ## Web Panel
 
 -   Ability for the general public to view [akin to litebans’ viewer see example [here](https://www.roxbot.com/bans/bans.php)]
--   Ability for appeals to be lodged, and for moderators/administrators to be able to see and manage appeals, and have a workflow in-place for dealing with these
+-   Ability for appeals to be lodged, and for moderators/administrators to be able to see and manage appeals, and have a workflow in place for dealing with these
 -   Ability for reports to be made, with a facility for attachments such as screenshots.
 -   Administrator control which allows for pruning, and modifying records from the web panel.
 -   Ability to configure the plugin from the web panel.
 -   Full audit log
--   Built in Vue/Nuxt 
+-   Built-in Vue/Nuxt 
 -   Authentication [^2]
 -   Hosting
 -   Provide docker images/compose [include DB in here in a compose/stack]
@@ -191,7 +191,7 @@ If an ip or uuid is not specified then it is assumed the target is a username.
 
 Plugin API :: General implementation of an API, this API will be fleshed out at a later date. [^3]
 
-RESTful API :: A swagger implentation will be created at a later date, allows users to have a web interface and other non-minecraft services to hook into the plugin, perhaps laying the basis for cross-game support for guilds that host servers across multiple games. 
+RESTful API :: A swagger implementation will be created at a later date, allowing users to have a web interface and other non-Minecraft services to hook into the plugin, perhaps laying the basis for cross-game support for guilds that host servers across multiple games. 
 
 ## Hooks
 
@@ -200,11 +200,11 @@ Many plugins already exist as de facto standards in the community for certain th
 - [**Placeholder API**](https://github.com/PlaceholderAPI/PlaceholderAPI) :: Expose Expiry, reasons, etc for warnings that way things such as featherboard could display punishments. Internal Placeholders will be available for use on Velocity.
 - [**PLAN**](https://github.com/plan-player-analytics/Plan) :: Allow punishments to be viewable on Plan, as well as have some PLAN metrics available on our web panel, if present
 - PROPOSED: [**Analyse**](https://analyse.net/) :: For the same reasons as PLAN above.
-- PROPOSED: [MCBanner](https://mcbouncer.com/) implementation :: To show common offenders, and contribute to the database. (Opt-in)
+- PROPOSED: [MCBanner](https://mcbanners.com/) implementation :: To show common offenders, and contribute to the database. (Opt-in)
 
 ## Cross-server considerations
 
-There could be a usecase in which having a ban *not* be universal across all servers in a network, in such a situation a method to identify the desired servers that the user is banned on should be added, if the field is blank it should be assumed they are banned everywhere. 
+There could be a use-case in which having a ban *not* be universal across all servers in a network, in such a situation a method to identify the desired servers that the user is banned on should be added, if the field is blank it should be assumed they are banned everywhere. 
 
 ---
 
