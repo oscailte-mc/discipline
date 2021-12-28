@@ -14,6 +14,7 @@ What to name the plugin? This is also something we're open for feedback on.
 -   Paper + forks? (Undecided if Spigot will be supported atm)
 -   Velocity (bungee is too much work to maintain)
 -   Sponge, post-first release likely
+-   Fabric support, depending on interest
     
 ## Misc Features
 -   Absolutely NO gimmicky GUIs
@@ -73,15 +74,16 @@ Due to the ergonomics of minecraft commands, it would be best if this experience
 ####  Timeperiod
 A string formatted as a piece of time for example “1M2w4d16h10m30s” 
 
-| Symbol | Meaning |
-| --------|----------|
-| M | month|
-|w| week|
-| d | day|
-|h| hour|
-|m| minute|
-|s| second|
-Enforced order of above symbols. 
+| Symbol  | Meaning |
+| --------|---------|
+| M       | month   |
+| w       | week    |
+| d       | day     |
+| h       | hour    |
+| m       | minute  |
+| s       | second  |
+* Enforced order of above symbols. 
+
 Alternatively, add support for Unix Timestamps as well, for expiry. 
 
 ## Web Panel
