@@ -2,25 +2,25 @@
 
 ## Name
 
-What to name the plugin?
+What to name the plugin? This is also something we're open for feedback on. 
 
 -   On the nose, and name it akin to current existing plugins, e.g. “LiteBans,” “LibertyBans,” etc.
 -   Something more generic, don’t base it on bans and see it as an overall punishment management system
--   I feel like we should go for an epic sounding mononym like “discipline,” which encompasses everything the plugin is trying to be, also calling the plugin discipline sounds pretty fkn metal imo
-    
-## Platforms
 
+>  I feel like we should go for an epic sounding mononym like “discipline,” which encompasses everything the plugin is trying to be, also calling the plugin discipline sounds pretty fkn metal imo
+- Rian
+
+## Platforms
 -   Paper + forks? (Undecided if Spigot will be supported atm)
 -   Velocity (bungee is too much work to maintain)
 -   Sponge, post-first release likely
+-   Fabric support, depending on interest
+-   Geyser support
     
-
-  
-
 ## Misc Features
 -   Absolutely NO gimmicky GUIs
 -   Ban importing from other plugins
--   Offline Player support
+-   Support for punishing offline players
 -   [Prometheus](https://prometheus.io/) support for Grafana Fanboys
 -   UUID based
 -   Fully customizable locationization
@@ -32,7 +32,8 @@ What to name the plugin?
 -   Utilize internal placeholders and PlaceholderAPI
 -   Discord / Guilded Webhook support for notification / audit logging. 
 -   Full audit log, including web-panel activity
-    
+-   Weighted warning system
+-   Vote to kick, vote to mute
 
 ## Commands
 Commands will be implemented using cloud.
@@ -74,15 +75,16 @@ Due to the ergonomics of minecraft commands, it would be best if this experience
 ####  Timeperiod
 A string formatted as a piece of time for example “1M2w4d16h10m30s” 
 
-| Symbol | Meaning |
-| --------|----------|
-| M | month|
-|w| week|
-| d | day|
-|h| hour|
-|m| minute|
-|s| second|
-Enforced order of above symbols. 
+| Symbol  | Meaning |
+| --------|---------|
+| M       | month   |
+| w       | week    |
+| d       | day     |
+| h       | hour    |
+| m       | minute  |
+| s       | second  |
+* Enforced order of above symbols. 
+
 Alternatively, add support for Unix Timestamps as well, for expiry. 
 
 ## Web Panel
@@ -110,3 +112,7 @@ Many plugins already exist as de facto standards in the community for certain th
 
 **Placeholder API** :: Expose Expiry, reasons, etc for warnings that way things such as featherboard could display punishments. Internal Placeholders will be available for use on Velocity.
 **PLAN** :: Allow punishments to be viewable on Plan, as well as have some PLAN metrics available on our web panel, if present
+
+## Cross-server considerations
+
+There could be a usecase in which having a ban *not* be universal across all servers in a network, in such a situation a method to identify the desired servers that the user is banned on should be added, if the field is blank it should be assumed they are banned everywhere. 
