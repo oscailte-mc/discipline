@@ -2,25 +2,23 @@
 
 ## Name
 
-What to name the plugin?
+What to name the plugin? This is also something we're open for feedback on. 
 
 -   On the nose, and name it akin to current existing plugins, e.g. “LiteBans,” “LibertyBans,” etc.
 -   Something more generic, don’t base it on bans and see it as an overall punishment management system
--   I feel like we should go for an epic sounding mononym like “discipline,” which encompasses everything the plugin is trying to be, also calling the plugin discipline sounds pretty fkn metal imo
-    
-## Platforms
 
+>  I feel like we should go for an epic sounding mononym like “discipline,” which encompasses everything the plugin is trying to be, also calling the plugin discipline sounds pretty fkn metal imo
+- Rian
+
+## Platforms
 -   Paper + forks? (Undecided if Spigot will be supported atm)
 -   Velocity (bungee is too much work to maintain)
 -   Sponge, post-first release likely
     
-
-  
-
 ## Misc Features
 -   Absolutely NO gimmicky GUIs
 -   Ban importing from other plugins
--   Offline Player support
+-   Support for punishing offline players
 -   [Prometheus](https://prometheus.io/) support for Grafana Fanboys
 -   UUID based
 -   Fully customizable locationization
@@ -32,7 +30,8 @@ What to name the plugin?
 -   Utilize internal placeholders and PlaceholderAPI
 -   Discord / Guilded Webhook support for notification / audit logging. 
 -   Full audit log, including web-panel activity
-    
+-   Weighted warning system
+-   Vote to kick, vote to mute
 
 ## Commands
 Commands will be implemented using cloud.
