@@ -111,3 +111,7 @@ Many plugins already exist as de facto standards in the community for certain th
 
 **Placeholder API** :: Expose Expiry, reasons, etc for warnings that way things such as featherboard could display punishments. Internal Placeholders will be available for use on Velocity.
 **PLAN** :: Allow punishments to be viewable on Plan, as well as have some PLAN metrics available on our web panel, if present
+
+## Cross-server considerations
+
+There could be a usecase in which having a ban *not* be universal across all servers in a network, in such a situation a method to identify the desired servers that the user is banned on should be added, if the field is blank it should be assumed they are banned everywhere. 
