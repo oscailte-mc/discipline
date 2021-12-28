@@ -15,6 +15,7 @@ What to name the plugin? This is also something we're open for feedback on.
 -   Velocity (bungee is too much work to maintain)
 -   Sponge, post-first release likely
 -   Fabric support, depending on interest
+-   Geyser support
     
 ## Misc Features
 -   Absolutely NO gimmicky GUIs
