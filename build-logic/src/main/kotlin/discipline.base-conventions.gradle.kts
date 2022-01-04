@@ -16,6 +16,10 @@ indra {
     github(GITHUB_ORGANIZATION, GITHUB_REPO)
 }
 
+license {
+    header.set(resources.text.fromFile(rootProject.file("LICENSE_HEADER")))
+}
+
 tasks {
     withType<JavaCompile> {
         // disable 'warning: No processor claimed any of these annotations' spam
